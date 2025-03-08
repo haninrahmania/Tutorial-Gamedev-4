@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://yqmk0vpvnyxr"]
+[gd_scene load_steps=8 format=4 uid="uid://yqmk0vpvnyxr"]
 
 [ext_resource type="PackedScene" uid="uid://bc2fujtl13g10" path="res://scenes/Player.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://76hi8rt1miuo" path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_gr_grass.png" id="2_idyyr"]
 [ext_resource type="PackedScene" uid="uid://r21p54tlbd6x" path="res://scenes/area_2d.tscn" id="3_epdm4"]
 [ext_resource type="Texture2D" uid="uid://chgqimvh7rdh6" path="res://assets/Familiar Looking Rocket.png" id="4_m65i5"]
-[ext_resource type="Script" path="res://scenes/spawner.gd" id="5_2yf3q"]
-[ext_resource type="PackedScene" uid="uid://edhsr0kwwxh" path="res://scenes/fish.tscn" id="6_ten4x"]
+[ext_resource type="PackedScene" uid="uid://b330ugvrr5nrw" path="res://scenes/spawner.tscn" id="5_u8pd6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u0net"]
 texture = ExtResource("2_idyyr")
@@ -77,7 +76,4 @@ texture = ExtResource("4_m65i5")
 scale = Vector2(10.7314, 23.7958)
 sceneName = "WinScreen"
 
-[node name="Spawner" type="Node2D" parent="."]
-position = Vector2(461, 108)
-script = ExtResource("5_2yf3q")
-obstacle = ExtResource("6_ten4x")
+[node name="Spawner" parent="." instance=ExtResource("5_u8pd6")]

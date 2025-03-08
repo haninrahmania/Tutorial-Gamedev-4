@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwhdgmeq5gjdr"]
+
+[ext_resource type="Script" path="res://scenes/fish.gd" id="1_7hq64"]
+[ext_resource type="Texture2D" uid="uid://ceubp61yw13o4" path="res://assets/kenney_platformerpack/PNG/Enemies/bee_move.png" id="2_s5g7t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j25ia"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lq1re"]
+radius = 9.37555
+
+[node name="Bee" type="RigidBody2D"]
+script = ExtResource("1_7hq64")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_s5g7t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_j25ia")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(6.04, 4.48)
+shape = SubResource("CircleShape2D_lq1re")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_FallArea_body_entered"]

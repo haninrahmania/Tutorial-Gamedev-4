@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 @export var speed: int = 400
-@export var gravity: int = 1200
-@export var jump_speed: int = -400
+@export var gravity: int = 1000
+@export var jump_speed: int = -500
 
 
 func get_input():
@@ -34,3 +34,7 @@ func _process(_delta):
 			$Sprite2D.flip_h = false
 		else:
 			$Sprite2D.flip_h = true
+
+
+func _on_Lose_Area_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
