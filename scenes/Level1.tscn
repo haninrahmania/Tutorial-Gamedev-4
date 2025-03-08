@@ -74,6 +74,6 @@ texture = ExtResource("4_m65i5")
 
 [node name="Area2D" parent="Sprite2D" instance=ExtResource("3_epdm4")]
 scale = Vector2(10.7314, 23.7958)
-sceneName = "WinScreen"
+sceneName = "Level2"
 
 [node name="Spawner" parent="." instance=ExtResource("5_u8pd6")]

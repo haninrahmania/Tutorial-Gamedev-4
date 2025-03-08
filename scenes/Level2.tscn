@@ -66,7 +66,10 @@ tile_map_data = PackedByteArray("AAABAAQAAQAHAAEAAAACAAQAAQAHAAEAAAADAAQAAQAHAAE
 tile_set = SubResource("TileSet_qybt6")
 
 [node name="LoseArea" type="Area2D" parent="."]
+position = Vector2(943, 1793)
+scale = Vector2(176.002, 6.42977)
 script = ExtResource("3_uelgx")
+sceneName = "Level2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LoseArea"]
 shape = SubResource("RectangleShape2D_p4vpn")
@@ -94,7 +97,7 @@ scale = Vector2(-3.15937, 4.22117)
 sceneName = "LoseScreen"
 
 [node name="Barnacle2" type="Sprite2D" parent="."]
-position = Vector2(822, 578)
+position = Vector2(823, 578)
 texture = ExtResource("8_bsy3t")
 
 [node name="Area2D" parent="Barnacle2" instance=ExtResource("7_c8em7")]
